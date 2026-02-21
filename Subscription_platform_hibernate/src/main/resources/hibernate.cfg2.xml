@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Oracle Database settings -->
+        <property name="hibernate.dialect">
+    org.hibernate.dialect.OracleDialect
+</property>
+
+
+        <property name="hibernate.connection.driver_class">
+            oracle.jdbc.driver.OracleDriver
+        </property>
+
+        <property name="hibernate.connection.url">
+            jdbc:oracle:thin:@localhost:1521:XE
+        </property>
+
+        <property name="hibernate.connection.username">
+            dharanya
+        </property>
+
+        <property name="hibernate.connection.password">
+            242006
+        </property>
+
+        <!-- Hibernate settings -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Mapping class -->
+        <mapping class="com.stream.bean.User"/>
+        <mapping class="com.stream.bean.Subscription"/>
+        <mapping class="com.stream.bean.Payment"/>
+
+    </session-factory>
+</hibernate-configuration>
